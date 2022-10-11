@@ -1,0 +1,15 @@
+.search-container {
+    margin: 2rem;
+}
+
+input[type="text"] {
+    width: 20rem;
+    height: 4rem;
+    font-size: 20px;
+}
+
+button[type="submit"] {
+    height: 4rem;
+    background-color: green;
+    font-size: 20px;
+}
