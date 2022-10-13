@@ -1,0 +1,23 @@
+.column {
+    float: left;
+    width: 33%;
+    height: 400px;
+  }
+  
+  .left{
+    background-color: rgb(212, 212, 0);
+  }
+  .right {
+    background-color: orange;
+  }
+  
+  .middle {
+    background-color: rgb(11, 196, 11);
+  }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
