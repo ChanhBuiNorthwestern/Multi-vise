@@ -14,7 +14,7 @@ function App() {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  redditResponse("Test");
+  redditResponse("Should I break up?");
 });
 
 function redditResponse(s){
@@ -26,12 +26,12 @@ function redditResponse(s){
     refreshToken: '1972848092863-Le8seeRHjHt_40HFLrIC10yNaAWvPg'
   });
 
-  const subreddit = r.getSubreddit('realEstate');
-  const topPosts = subreddit.getTop({time: 'week', limit: 3});
+  const subreddit = r.getSubreddit('relationship_advice');
+  const relatedPosts = subreddit.search({query: s, sort: "relevance"})
 
   let data = [];
 
-  topPosts.forEach((post) => {
+  relatedPosts.forEach((post) => {
     data.push({
       link: post.url,
       text: post.title,
