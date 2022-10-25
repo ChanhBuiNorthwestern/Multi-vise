@@ -14,10 +14,10 @@ const Result = ({result, id}) => {
 const ResultList = ({results}) => {
     return (
         <div className = "results">
-            { results.map((result) =>
-            <Result
-                result={result}
-                />
+            { Object.entries(results).map((result) =>
+            result !== undefined && result !== null
+            ? <Result result={result}/>
+            : ''
             )}
         </div>
     )

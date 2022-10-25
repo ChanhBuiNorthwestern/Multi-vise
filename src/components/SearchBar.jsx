@@ -56,7 +56,7 @@ async function getVal(){
     console.log(await redditResponse(userQuestion));
 
     return (
-      redditResponse(userQuestion)
+      await redditResponse(userQuestion)
     );
 } //need to funnel userQuestion into the API call now i think??
 
@@ -68,7 +68,7 @@ const SearchBar = () => (
         <button id="subButton" className='submit-button' type="submit" onClick={getVal}>Submit</button>
         <ResultList results={getVal}/>
     </div>
-    
+
 );
 // var subButton = document.getElementById('subButton');
 // subButton.addEventListener('click', getVal, false); 
