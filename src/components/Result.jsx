@@ -1,11 +1,26 @@
 import './Result.css'
 
-const Result = () => (
-    <div className="row">
-        <div className="column left"> Column 1</div>
-        <div className="column middle"> Column 2</div>
-        <div className="column right"> Column 3</div>
-    </div>
-);
+const Result = ({result, id}) => {
+    return (
+      <div className="result-card m-2 p-2">
+            <div className = "result-body">
+                <p>{result.text}</p>
+                <p style={{fontStyle: 'italic'}}>Popularity: {result.score} | Sentiment: {result.sent_score}</p>
+            </div>
+      </div>  
+    );
+}
 
-export default Result;
+const ResultList = ({results}) => {
+    return (
+        <div className = "results">
+            { results.map((result) =>
+            <Result
+                result={result}
+                />
+            )}
+        </div>
+    )
+}
+
+export default ResultList;
