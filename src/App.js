@@ -14,7 +14,7 @@ function App() {
 }
 
 document.addEventListener("DOMContentLoaded", async function(){
-  console.log(await redditResponse("My relationship is toxix. Should I break up?"));
+  console.log(await redditResponse("My relationship is toxic. Should I break up?"));
 });
 
 /*
