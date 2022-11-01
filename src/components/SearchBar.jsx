@@ -51,7 +51,7 @@ async function getVal(){
     var userQuestion = document.getElementById('questionField').value;
     // var question = document.getElementById("questionField");
     // this.questionField = ''; // only needed maybe if we keep search bar after submit
-    console.log((userQuestion));
+    // console.log((userQuestion));
     console.log(await redditResponse(userQuestion));
 } //need to funnel userQuestion into the API call now i think??
 
