@@ -1,5 +1,5 @@
 import './SearchBar.css'
-import ResultList from "./Result"
+import Result from "./Result"
 // import redditResponse from '../App'
 // import redditResponse from '../../src/App'
 async function redditResponse(s){
@@ -9,7 +9,6 @@ async function redditResponse(s){
     var Analyzer = require('natural').SentimentAnalyzer;
     var stemmer = require('natural').PorterStemmer;
     var analyzer = new Analyzer("English", stemmer, "afinn");
-  
   
     const r = new snoowrap({
       userAgent: 'Multi-vise',
@@ -48,6 +47,7 @@ async function redditResponse(s){
     });
     return comments
   }
+
 async function getVal(){
     var userQuestion = document.getElementById('questionField').value;
     // var question = document.getElementById("questionField");
@@ -66,7 +66,7 @@ const SearchBar = () => (
         {/* <button className='submit-button' type="submit" Onclick={this.getVal}>Submit</button> */}
         {/* <button id="subButton" className='submit-button' type="submit" onlick='getVal()'>Submit</button> */}
         <button id="subButton" className='submit-button' type="submit" onClick={getVal}>Submit</button>
-        <ResultList results={getVal}/>
+        <Result results={getVal}/>
     </div>
 
 );
